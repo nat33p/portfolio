@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#EDE8D8"/><text x="100" y="124" text-anchor="middle" font-family="Figtree, Helvetica, Arial, sans-serif" font-weight="700" font-size="72" fill="#676F4D">N</text></svg></template>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&amp;display=swap">
+<meta name="ext-resource-dependency" content="assets/avatars/nicole-dornsife.png">
+<meta name="ext-resource-dependency" content="assets/avatars/william-leborgne.png">
+<meta name="ext-resource-dependency" content="assets/avatars/brian-hinman.png">
+<meta name="ext-resource-dependency" content="assets/logos/acer.png">
+<meta name="ext-resource-dependency" content="assets/logos/tahzoo.png">
+<meta name="ext-resource-dependency" content="assets/logos/fetch.png">
+<meta name="ext-resource-dependency" content="assets/logos/uberall.png">
+<meta name="ext-resource-dependency" content="assets/logos/homedepot.png">
+<meta name="ext-resource-dependency" content="assets/logos/patch.png">
+<meta name="ext-resource-dependency" content="assets/logos/mfp.png">
+<meta name="ext-resource-dependency" content="mfpwl-hero1-muol8yle-46yh.jpeg">
+<meta name="ext-resource-dependency" content="assets/work/mfp-multiday.gif">
+<meta name="ext-resource-dependency" content="assets/patch/patch-1.png">
+<meta name="ext-resource-dependency" content="assets/icons/venture-1.svg">
+<meta name="ext-resource-dependency" content="assets/icons/venture-2.svg">
+<meta name="ext-resource-dependency" content="assets/icons/venture-3.svg">
+<meta name="ext-resource-dependency" content="assets/icons/venture-4.svg">
+<style>
+html,body{margin:0;padding:0;background:#fff;}
+*{box-sizing:border-box;}
+body{font-family:Figtree,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#39343F;-webkit-font-smoothing:antialiased;}
+a{color:#39343F;text-decoration:none;}
+a:hover{color:#676F4D;}
+img{display:block;}
+</style>
+</helmet>
+
+<div style="font-family: Figtree, sans-serif; background: #fff; overflow-x: hidden; color: #39343F;">
+
+<section id="top" data-screen-label="Hero" ref="{{ heroRef }}" onPointerMove="{{ onMove }}" onPointerLeave="{{ onLeave }}" onPointerDown="{{ onMove }}" style="position: relative; overflow: hidden; background: #EDE8D8; min-height: clamp(600px, 92svh, 880px); cursor: none; touch-action: pan-y; display: flex; flex-direction: column;">
+  <canvas ref="{{ canvasRef }}" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;"></canvas>
+
+  <sc-if value="{{ showTrees }}" hint-placeholder-val="{{ true }}">
+    <img src="assets/tree-right-full.png" alt="" style="position: absolute; right: 0; bottom: 0; height: 94%; width: auto; aspect-ratio: 848 / 1264; transform: translateX(calc(40% + 44px)); z-index: 1; pointer-events: none; user-select: none;">
+    <img src="assets/tree-top-left.png" alt="" style="position: absolute; left: 0; top: -12px; width: clamp(140px, 10.05vw, 193px); aspect-ratio: 386 / 886; object-fit: cover; object-position: top left; z-index: 1; pointer-events: none; user-select: none;">
+    <img src="assets/tree-left.png" alt="" style="position: absolute; left: calc(-14.48vw - 144px); top: calc(77.8% + 56px); width: clamp(642px, 56.07vw, 1076px); aspect-ratio: 503 / 750; object-fit: cover; z-index: 1; pointer-events: none; user-select: none;">
+  </sc-if>
+
+  <header style="position: relative; z-index: 3; display: flex; justify-content: center; padding: 24px 12px;">
+    <nav data-no-rake="1" style="display: flex; align-items: center; gap: clamp(2px, 0.8vw, 32px); padding: 12px clamp(8px, 1.5vw, 20px); border-radius: 1000px; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); cursor: auto; max-width: 100%; background-color: #39343F00; justify-content: center">
+      <a href="#top" style="height: 48px; display: flex; align-items: center; justify-content: center; padding: 14px clamp(10px, 1.4vw, 16px); border-radius: 100px; background-color: #F9FAFA; font-weight: 600; font-size: 16px; line-height: 1; letter-spacing: -0.04em; color: #0B3E47; white-space: nowrap;">Home</a>
+      <a href="#work" onClick="{{ toSection }}" style="height: 48px; display: flex; align-items: center; padding: 14px clamp(10px, 1.4vw, 16px); border-radius: 100px; font-weight: 600; font-size: 16px; line-height: 1; letter-spacing: -0.04em; color: #0B3E47; white-space: nowrap;" style-hover="background: rgba(249,250,250,0.5);">Work</a>
+      
+      <a href="About.dc.html" style="height: 48px; display: flex; align-items: center; gap: 10px; padding: 8px 8px 8px 16px; border-radius: 100px; font-weight: 600; font-size: 16px; line-height: 1; letter-spacing: -0.04em; color: #0B3E47; white-space: nowrap;" style-hover="background: rgba(249,250,250,0.5);">About<img src="assets/natface.jpg" alt="" style="width: 32px; height: 32px; border-radius: 1000px; object-fit: cover;"></a>
+    </nav>
+  </header>
+
+  <div style="position: absolute; inset: 0; z-index: 2; display: flex; justify-content: center; align-items: center; padding: 96px 20px; pointer-events: none;">
+    <div data-no-rake="1" style="position: relative; transform: translateY(16px); pointer-events: auto; width: 100%; max-width: 741px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; padding: 38px clamp(18px, 2.3vw, 36px) 43px; cursor: auto; isolation: isolate;">
+      <div aria-hidden="true" style="position: absolute; inset: 0; z-index: -1; background-color: #39343F00; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); border-radius: 41% 49% 44% 52% / 54% 46% 58% 48%; transform: scale(1.07) rotate(-1.4deg); box-shadow: none;"></div>
+      <div aria-hidden="true" style="position: absolute; inset: 6% 3% 8% 5%; z-index: -1; border-radius: 52% 44% 50% 46% / 48% 56% 42% 54%; transform: scale(1.07) rotate(2.2deg); background: transparent;"></div>
+      <span style="font-weight: 500; font-size: clamp(18px, 1.6vw, 26px); line-height: 1; letter-spacing: 0.02em; color: #39343F; text-align: center;">Hi, I'm Nat, a Product Designer.</span>
+      <h1 style="margin: 0; font-weight: 700; font-size: clamp(38px, 3.79vw, 72.7px); line-height: 1.155; color: #39343F; text-align: center; text-wrap: balance;">I bring clarity to complex product challenges.</h1>
+    </div>
+  </div>
+
+  <div ref="{{ combRef }}" aria-hidden="true" style="position: absolute; left: 0; top: 0; z-index: 5; pointer-events: none; opacity: 0; transition: opacity 0.2s; will-change: transform;">
+    <div ref="{{ handleRef }}" style="position: absolute; left: 0; top: -3.5px; width: 120px; height: 7px; border-radius: 4px; background: #8A6C4A; box-shadow: 0 2px 3px rgba(40,30,20,0.25); transform-origin: 0 50%;"></div>
+    <div ref="{{ barRef }}" style="position: absolute; left: 0; top: 0; height: 12px; display: flex; align-items: center; justify-content: center; gap: 5px; padding: 0 4px; border-radius: 4px; background: #9C7C57; box-shadow: 0 2px 4px rgba(40,30,20,0.3), inset 0 1px 0 rgba(255,240,210,0.35); transform-origin: 50% 50%;">
+      <sc-for list="{{ tineList }}" as="t" hint-placeholder-count="7">
+        <span style="width: 4px; height: 4px; border-radius: 2px; background: #5E4630; flex-shrink: 0;"></span>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="about" data-screen-label="Intro" style="border-bottom: 1px solid rgba(0,0,0,0.0784); padding: clamp(80px, 8.33vw, 160px) 20px; display: flex; justify-content: center;">
+  <div style="width: 100%; max-width: 832px; display: flex; flex-direction: column; gap: 16px;">
+    <p style="margin: 0; font-weight: 400; font-size: clamp(20px, 1.6vw, 26px); line-height: 1.615; letter-spacing: 0.18px; text-wrap: pretty;">I have 12 years of experience designing intuitive digital products and driving measurable business outcomes. My specialties include aligning cross-functional teams around scalable solutions, and helping organizations move faster in delivering cohesive, high-impact experiences across responsive web and native iOS platforms.</p>
+  </div>
+</section>
+
+<section data-screen-label="Clients" style="padding: clamp(48px, 4.2vw, 80px) 20px; display: flex; justify-content: center;">
+  <div style="width: 100%; max-width: 1344px; height: 68px; overflow: hidden; position: relative; -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 7.14%, #000 92.86%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0%, #000 7.14%, #000 92.86%, transparent 100%);">
+    <div ref="{{ marqueeRef }}" style="display: flex; align-items: center; height: 68px; width: max-content; will-change: transform;">
+      <sc-for list="{{ logos }}" as="l" hint-placeholder-count="12">
+        <img data-src="{{ l.src }}" alt="{{ l.name }}" style="height: {{ l.h }}px; width: auto; margin-right: clamp(56px, 5.8vw, 112px); flex-shrink: 0;">
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="work" data-screen-label="Work" style="padding: 10px 20px clamp(64px, 5vw, 96px); display: flex; justify-content: center;">
+  <div style="width: 100%; max-width: 1280px; border-top: 2.237px solid #000; padding: 26px 0; display: flex; flex-direction: column; gap: clamp(40px, 4.2vw, 80px); border-color: #39343F">
+    <div style="padding: 22px 0 0;">
+      <h2 style="margin: 0; font-weight: 500; font-size: clamp(36px, 2.76vw, 52.9px); line-height: 1.165;">Work</h2>
+    </div>
+    <a href="Fetch Case Study.dc.html" style="display: flex; flex-direction: column;">
+      <div style="width: 100%; aspect-ratio: 1280 / 800; border-radius: 12px; overflow: hidden; background: rgba(0,0,0,0.0392);">
+        <img src="./hero-2--muoi8vjj-9tao.png" alt="Pleo — Onboarding employees in-app" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(.2,.7,.2,1);" style-hover="transform: scale(1.015);">
+      </div>
+      <div style="display: flex; gap: 8px; align-items: baseline; padding-top: 24px; font-weight: 500; font-size: clamp(20px, 1.25vw, 24px); line-height: 1.1; letter-spacing: 0.24px;"><span>Fetch Rewards App</span><svg viewBox="7.6 4.16 6.38 11.68" fill="none" aria-hidden="true" style="width: 0.42em; height: 0.77em; flex-shrink: 0; display: inline-block; vertical-align: -0.06em; align-self: center;"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.95727 4.39348C8.29228 4.07792 8.81969 4.09368 9.13525 4.4287L13.6926 9.26698C13.7924 9.37321 13.8641 9.49458 13.9105 9.61857C13.957 9.7426 13.9794 9.87222 13.9794 10.0001C13.9794 10.128 13.957 10.2576 13.9105 10.3816C13.8641 10.5056 13.7924 10.627 13.6926 10.7332L9.13525 15.5715C8.81969 15.9065 8.29228 15.9223 7.95727 15.6067C7.62225 15.2911 7.60648 14.7637 7.92205 14.4287L12.0935 10.0001L7.92205 5.57147C7.60648 5.23645 7.62225 4.70905 7.95727 4.39348Z" fill="currentColor"></path></svg></div>
+      <span style="padding-top: 6px; font-weight: 400; font-size: clamp(17px, 1.14vw, 21.8px); line-height: 1.21; letter-spacing: 0.24px;">Boosting First-Time Shop Purchases by 35% Through a Clearer User Journey</span>
+    </a>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: clamp(48px, 4.2vw, 80px) 32px;">
+      <sc-for list="{{ work }}" as="w" hint-placeholder-count="4">
+        <a href="{{ w.href }}" style="display: flex; flex-direction: column;">
+          <div style="width: 100%; aspect-ratio: 624 / 390; border-radius: 12px; overflow: hidden; background: rgba(0,0,0,0.0392);">
+            <img data-src="{{ w.img }}" alt="{{ w.title }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(.2,.7,.2,1);" style-hover="transform: scale(1.02);">
+          </div>
+          <div style="display: flex; gap: 8px; align-items: baseline; padding-top: 24px; font-weight: 500; font-size: clamp(19px, 1.18vw, 22.7px); line-height: 1.16; letter-spacing: 0.24px;"><span style="font-weight: 400">{{ w.title }}</span><svg viewBox="7.6 4.16 6.38 11.68" fill="none" aria-hidden="true" style="width: 0.42em; height: 0.77em; flex-shrink: 0; display: inline-block; vertical-align: -0.06em; align-self: center;"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.95727 4.39348C8.29228 4.07792 8.81969 4.09368 9.13525 4.4287L13.6926 9.26698C13.7924 9.37321 13.8641 9.49458 13.9105 9.61857C13.957 9.7426 13.9794 9.87222 13.9794 10.0001C13.9794 10.128 13.957 10.2576 13.9105 10.3816C13.8641 10.5056 13.7924 10.627 13.6926 10.7332L9.13525 15.5715C8.81969 15.9065 8.29228 15.9223 7.95727 15.6067C7.62225 15.2911 7.60648 14.7637 7.92205 14.4287L12.0935 10.0001L7.92205 5.57147C7.60648 5.23645 7.62225 4.70905 7.95727 4.39348Z" fill="currentColor"></path></svg></div>
+          <span style="padding-top: 6px; font-weight: 600; font-size: clamp(16px, 1.125vw, 21.6px); line-height: 1.22; letter-spacing: 0.24px">{{ w.desc }}</span>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" data-screen-label="Testimonials" style="border-bottom: 1px solid rgba(0,0,0,0.0784); padding: clamp(64px, 5vw, 96px) 0; display: flex; flex-direction: column; align-items: center; gap: clamp(40px, 4.2vw, 80px);">
+  <div style="width: 100%; padding: 0 20px; display: flex; justify-content: center;">
+    <div style="width: 100%; max-width: 1280px; border-top: 7.992px solid #000; padding-top: 26px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-color: #39343F">
+      <h2 style="margin: 0; font-weight: 500; font-size: clamp(36px, 2.67vw, 51.3px); line-height: 1.2;">Testimonials</h2>
+      <a href="#testimonials" style="font-weight: 500; font-size: 15px; line-height: 25.5px; letter-spacing: 0.34px;">View all <svg viewBox="7.6 4.16 6.38 11.68" fill="none" aria-hidden="true" style="width: 0.42em; height: 0.77em; flex-shrink: 0; display: inline-block; vertical-align: -0.06em; align-self: center;"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.95727 4.39348C8.29228 4.07792 8.81969 4.09368 9.13525 4.4287L13.6926 9.26698C13.7924 9.37321 13.8641 9.49458 13.9105 9.61857C13.957 9.7426 13.9794 9.87222 13.9794 10.0001C13.9794 10.128 13.957 10.2576 13.9105 10.3816C13.8641 10.5056 13.7924 10.627 13.6926 10.7332L9.13525 15.5715C8.81969 15.9065 8.29228 15.9223 7.95727 15.6067C7.62225 15.2911 7.60648 14.7637 7.92205 14.4287L12.0935 10.0001L7.92205 5.57147C7.60648 5.23645 7.62225 4.70905 7.95727 4.39348Z" fill="currentColor"></path></svg></a>
+    </div>
+  </div>
+  <div style="width: 100%; display: flex; flex-direction: column; align-items: center; gap: 24px;">
+    <div ref="{{ viewportRef }}" style="width: 100%; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scroll-padding: 0 max(20px, calc((100% - 1280px) / 2)); scroll-behavior: smooth; scrollbar-width: none; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;">
+      <div ref="{{ trackRef }}" style="display: flex; align-items: stretch; gap: 24px; width: max-content; padding: 0 max(20px, calc((100vw - 1280px) / 2));">
+        <sc-for list="{{ testimonials }}" as="q" hint-placeholder-count="5">
+          <figure data-card="1" style="margin: 0; scroll-snap-align: start; width: min(628px, calc(100vw - 40px)); flex-shrink: 0; border-radius: 16px; padding: clamp(28px, 2.9vw, 56px); display: flex; flex-direction: column; justify-content: space-between; gap: 32px; min-height: clamp(360px, 22.8vw, 437px); background-color: #EDE8D88B">
+            <blockquote style="margin: 0; display: flex; flex-direction: column; gap: 24px; font-weight: 400; font-size: clamp(17px, 1.1vw, 21px); line-height: 1.714; letter-spacing: 0.144px; text-wrap: pretty;">
+              <p style="margin: 0;">{{ q.a }}</p>
+              <p style="margin: 0;">{{ q.b }}</p>
+            </blockquote>
+            <figcaption style="display: flex; align-items: center; gap: 16px; padding: 5px 0;">
+              <img data-src="{{ q.img }}" alt="{{ q.name }}" style="width: 48px; height: 48px; border-radius: 9999px; object-fit: cover; background: url(&quot;./image-191-mugebcvp-onv2.png&quot;) center / cover no-repeat; flex-shrink: 0">
+              <div style="display: flex; flex-direction: column;">
+                <span style="font-weight: 500; font-size: 14.6px; line-height: 22.4px;">{{ q.name }}</span>
+                <span style="font-weight: 500; font-size: 14.8px; line-height: 22.4px; color: rgba(57,52,63,0.72);">{{ q.role }}</span>
+              </div>
+            </figcaption>
+          </figure>
+        </sc-for>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 4px; height: 56px; padding: 0 8px; border-radius: 1000px; background: #676F4D;">
+      <button onClick="{{ prev }}" aria-label="Previous testimonial" style="width: 44px; height: 44px; border: 0; border-radius: 100px; background: transparent; color: #fff; font-family: Figtree, sans-serif; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(255,255,255,0.14);"><svg viewBox="7.6 4.16 6.38 11.68" fill="none" aria-hidden="true" style="width: 0.42em; height: 0.77em; flex-shrink: 0; display: inline-block; vertical-align: -0.06em; align-self: center; transform: scaleX(-1);"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.95727 4.39348C8.29228 4.07792 8.81969 4.09368 9.13525 4.4287L13.6926 9.26698C13.7924 9.37321 13.8641 9.49458 13.9105 9.61857C13.957 9.7426 13.9794 9.87222 13.9794 10.0001C13.9794 10.128 13.957 10.2576 13.9105 10.3816C13.8641 10.5056 13.7924 10.627 13.6926 10.7332L9.13525 15.5715C8.81969 15.9065 8.29228 15.9223 7.95727 15.6067C7.62225 15.2911 7.60648 14.7637 7.92205 14.4287L12.0935 10.0001L7.92205 5.57147C7.60648 5.23645 7.62225 4.70905 7.95727 4.39348Z" fill="currentColor"></path></svg></button>
+      <button onClick="{{ next }}" aria-label="Next testimonial" style="width: 44px; height: 44px; border: 0; border-radius: 100px; background: transparent; color: #fff; font-family: Figtree, sans-serif; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center;" style-hover="background: rgba(255,255,255,0.14);"><svg viewBox="7.6 4.16 6.38 11.68" fill="none" aria-hidden="true" style="width: 0.42em; height: 0.77em; flex-shrink: 0; display: inline-block; vertical-align: -0.06em; align-self: center;"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.95727 4.39348C8.29228 4.07792 8.81969 4.09368 9.13525 4.4287L13.6926 9.26698C13.7924 9.37321 13.8641 9.49458 13.9105 9.61857C13.957 9.7426 13.9794 9.87222 13.9794 10.0001C13.9794 10.128 13.957 10.2576 13.9105 10.3816C13.8641 10.5056 13.7924 10.627 13.6926 10.7332L9.13525 15.5715C8.81969 15.9065 8.29228 15.9223 7.95727 15.6067C7.62225 15.2911 7.60648 14.7637 7.92205 14.4287L12.0935 10.0001L7.92205 5.57147C7.60648 5.23645 7.62225 4.70905 7.95727 4.39348Z" fill="currentColor"></path></svg></button>
+    </div>
+  </div>
+</section>
+
+
+
+<footer data-screen-label="Footer" style="background: #EDE8D8; padding: clamp(80px, 8.33vw, 160px) 20px; display: flex; justify-content: center;">
+  <div style="width: 100%; max-width: 1280px; display: flex; flex-wrap: wrap; gap: 48px 64px;">
+    <a href="#top" style="flex: 0 0 160px;"></a>
+    <div style="flex: 1 1 520px; display: flex; flex-direction: column; gap: 64px; width: 762px; height: 335px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px;">
+        <p style="margin: 0; max-width: 420px; font-weight: 500; font-size: clamp(18px, 1.14vw, 21.8px); line-height: 1.65; letter-spacing: 0.144px; text-wrap: pretty;">I’m Nat, a Product Design leader bringing clarity to complex product challenges.</p>
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <a href="mailto:nat33p@gmail.com" target="_top" style="height: 48px; display: flex; align-items: center; padding: 0 22px; border-radius: 10.8px; color: #fff; font-weight: 500; font-size: 13.9px; letter-spacing: 0.3px; white-space: nowrap; gap: 8px; background-color: #676F4D; padding-left: 16px; padding-right: 16px" style-hover="background: #565D40; color: #fff;"><svg viewBox="0 0 42 42" fill="none" aria-hidden="true" style="width: 15px; height: 15px; flex-shrink: 0;"><path d="M41.5627 0.437581C41.7683 0.643038 41.9099 0.903832 41.9701 1.18824C42.0302 1.47265 42.0065 1.76842 41.9017 2.03958L26.9017 41.0396C26.7955 41.3155 26.6101 41.554 26.3689 41.7249C26.1276 41.8958 25.8412 41.9917 25.5456 42.0003C25.2501 42.009 24.9585 41.9301 24.7077 41.7736C24.4568 41.617 24.2578 41.3899 24.1357 41.1206L17.8627 27.3206L27.0907 18.0896C27.4881 17.6631 27.7045 17.0989 27.6942 16.516C27.6839 15.9331 27.4478 15.377 27.0355 14.9647C26.6233 14.5525 26.0671 14.3163 25.4842 14.3061C24.9013 14.2958 24.3372 14.5121 23.9107 14.9096L14.6797 24.1376L0.879666 17.8676C0.609566 17.7456 0.381656 17.5463 0.224699 17.2949C0.0677422 17.0435 -0.0112262 16.7513 -0.00223973 16.4551C0.00674673 16.1588 0.103285 15.8719 0.275192 15.6305C0.447099 15.3891 0.686668 15.204 0.963666 15.0986L39.9637 0.0985809C40.2344 -0.00559549 40.5296 -0.0290182 40.8134 0.0311505C41.0972 0.0913193 41.3575 0.232497 41.5627 0.437581Z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor"></path></svg>Email me</a>
+          <button onClick="{{ copyEmail }}" style="height: 46px; padding: 0 22px; border-radius: 10.8px; background: #fff; border: 1px solid rgba(0,0,0,0.102); font-family: Figtree, sans-serif; font-weight: 500; font-size: 14.1px; letter-spacing: 0.3px; color: #39343F; cursor: pointer; white-space: nowrap; display: inline-flex; align-items: center; gap: 8px; padding-left: 16px; padding-right: 16px"><svg viewBox="0 0 42 42" fill="none" aria-hidden="true" style="width: 15px; height: 15px; flex-shrink: 0;"><path d="M37.8571 0H17.1429C14.8548 0 13 1.85482 13 4.14286V24.8571C13 27.1452 14.8548 29 17.1429 29H37.8571C40.1452 29 42 27.1452 42 24.8571V4.14286C42 1.85482 40.1452 0 37.8571 0Z" fill="#676F4D"></path><path d="M13.4643 33.7143C12.0908 33.7143 10.7737 33.1687 9.80248 32.1975C8.83131 31.2263 8.28571 29.9092 8.28571 28.5357V13H4.14286C1.86429 13 0 14.8643 0 17.1429V37.8571C0 40.1357 1.86429 42 4.14286 42H24.8571C27.1357 42 29 40.1357 29 37.8571V33.7143H13.4643Z" fill="#676F4D"></path></svg>{{ copyLabel }}</button>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 40px 32px;">
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <span style="font-weight: 500; font-size: 14.8px; line-height: 25.5px; color: rgba(57,52,63,0.72); padding-bottom: 6px;">Social</span>
+          <a href="https://www.linkedin.com/in/petersonnatalie/" style="font-weight: 500; font-size: 15px; line-height: 25.5px;" target="_blank" rel="noopener noreferrer">Linkedin</a>
+          <a href="https://dribbble.com/nat33p" style="font-weight: 500; font-size: 15px; line-height: 25.5px;">Dribbble</a>
+          <a href="https://www.pinterest.com/natatatdesign/" style="font-weight: 500; font-size: 15px; line-height: 25.5px;" target="_blank" rel="noopener noreferrer">Pinterest</a>
+          
+          
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <span style="font-weight: 500; font-size: 14.8px; line-height: 25.5px; color: rgba(57,52,63,0.72); padding-bottom: 6px;">Pages</span>
+          <a href="#work" onClick="{{ toSection }}" style="font-weight: 500; font-size: 15px; line-height: 25.5px;">Work</a>
+          
+          <a href="About.dc.html" style="font-weight: 500; font-size: 15px; line-height: 25.5px;">About</a>
+          
+          
+          
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          
+          
+          
+          
+          
+        </div>
+      </div>
+      <span style="font-weight: 500; font-size: 14.8px; line-height: 25.5px; color: rgba(57,52,63,0.72); position: relative">©2026 to Natalie Peterson</span>
+    </div>
+  </div><a href="#top" style="flex: 0 0 160px;"></a>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;tines&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:7,&quot;min&quot;:3,&quot;max&quot;:14,&quot;section&quot;:&quot;Zen rake&quot;,&quot;tsType&quot;:&quot;number&quot;},&quot;grooveDepth&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.3,&quot;max&quot;:1.6,&quot;step&quot;:0.1,&quot;section&quot;:&quot;Zen rake&quot;,&quot;tsType&quot;:&quot;number&quot;},&quot;showTrees&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;section&quot;:&quot;Hero&quot;,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { narrow: false, idx: 1, copied: false };
+  heroRef = React.createRef(); canvasRef = React.createRef(); combRef = React.createRef();
+  barRef = React.createRef(); handleRef = React.createRef();
+  marqueeRef = React.createRef(); trackRef = React.createRef(); viewportRef = React.createRef();
+
+  tines() { return Math.max(2, Math.min(14, Math.round(this.props.tines ?? 7))); }
+  depth() { return this.props.grooveDepth ?? 1; }
+
+  syncImgs() {
+    document.querySelectorAll('img[data-src]').forEach(el => { const s = el.getAttribute('data-src'); if (s && el.getAttribute('src') !== s) el.setAttribute('src', s); });
+  }
+  componentDidMount() {
+    this.syncImgs();
+    if (location.hash === '#work') {
+      const jump = () => { const el = document.getElementById('work'); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 24 }); };
+      requestAnimationFrame(jump); setTimeout(jump, 400); setTimeout(jump, 1200);
+    }
+    this.makeGrain();
+    this.onResize = () => {
+      const narrow = window.innerWidth < 900;
+      if (narrow !== this.state.narrow) this.setState({ narrow });
+      this.positionCarousel();
+    };
+    window.addEventListener('resize', this.onResize);
+    this.onResize();
+    this.ro = new ResizeObserver(() => this.fitCanvas());
+    if (this.heroRef.current) this.ro.observe(this.heroRef.current);
+    this.fitCanvas();
+    let last = performance.now(); this.mx = 0;
+    const tick = (t) => {
+      const dt = Math.min(64, t - last); last = t;
+      const el = this.marqueeRef.current;
+      if (el) {
+        const half = el.scrollWidth / 2;
+        this.mx -= dt * 0.045;
+        if (half && -this.mx >= half) this.mx += half;
+        el.style.transform = `translate3d(${this.mx}px,0,0)`;
+      }
+      this.raf = requestAnimationFrame(tick);
+    };
+    this.raf = requestAnimationFrame(tick);
+    setTimeout(() => this.positionCarousel(), 60);
+    if (document.fonts) document.fonts.ready.then(() => this.positionCarousel());
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+    cancelAnimationFrame(this.raf);
+    this.ro && this.ro.disconnect();
+  }
+  componentDidUpdate(pp, ps) {
+    this.syncImgs();
+    if (ps.idx !== this.state.idx) this.positionCarousel();
+    if (pp.tines !== this.props.tines) this.updateComb();
+  }
+
+  makeGrain() {
+    const S = 256, c = document.createElement('canvas'); c.width = c.height = S;
+    const g = c.getContext('2d'), img = g.createImageData(S, S), d = img.data;
+    for (let i = 0; i < d.length; i += 4) {
+      let n = (Math.random() - 0.5) * 9;
+      const r = Math.random();
+      if (r < 0.03) n -= 16 + Math.random() * 16; else if (r < 0.055) n += 9;
+      d[i] = 237 + n; d[i + 1] = 232 + n; d[i + 2] = 216 + n * 1.12; d[i + 3] = 255;
+    }
+    g.putImageData(img, 0, 0);
+    this.grain = c;
+  }
+
+  fitCanvas() {
+    const hero = this.heroRef.current, cv = this.canvasRef.current;
+    if (!hero || !cv || !this.grain) return;
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    const w = hero.clientWidth, h = hero.clientHeight;
+    if (this.cw === w && this.ch === h && this.dpr === dpr) return;
+    let old = null;
+    if (this.cw) { old = document.createElement('canvas'); old.width = cv.width; old.height = cv.height; old.getContext('2d').drawImage(cv, 0, 0); }
+    cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
+    const ctx = cv.getContext('2d');
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const pat = ctx.createPattern(this.grain, 'repeat');
+    if (pat.setTransform) pat.setTransform(new DOMMatrix().scale(1 / dpr));
+    ctx.fillStyle = pat; ctx.fillRect(0, 0, w, h);
+    if (old) ctx.drawImage(old, 0, 0, old.width / this.dpr, old.height / this.dpr);
+    this.ctx = ctx; this.pat = pat; this.cw = w; this.ch = h; this.dpr = dpr;
+  }
+
+  fadeEnd(p) {
+    const ctx = this.ctx; if (!ctx || !p) return;
+    const dpr = this.dpr, T = this.tines(), half = T * 9 / 2 + 2;
+    const n = this.n || { x: 0, y: 1 }, u = this.u || { x: 1, y: 0 };
+    const R = half + 14;
+    const cx = p.x - u.x * 10, cy = p.y - u.y * 10;
+    const S = Math.ceil(2 * R * dpr);
+    const tmp = document.createElement('canvas'); tmp.width = tmp.height = S;
+    const t = tmp.getContext('2d');
+    const pat = t.createPattern(this.grain, 'repeat');
+    if (pat.setTransform) pat.setTransform(new DOMMatrix().translate(-Math.round((cx - R) * dpr), -Math.round((cy - R) * dpr)));
+    t.fillStyle = pat; t.fillRect(0, 0, S, S);
+    t.globalCompositeOperation = 'destination-in';
+    t.setTransform(new DOMMatrix().translate(S / 2, S / 2).rotate(Math.atan2(u.y, u.x) * 180 / Math.PI).scale(0.62, 1));
+    const g = t.createRadialGradient(0, 0, 0, 0, 0, R * dpr);
+    g.addColorStop(0, 'rgba(0,0,0,0.92)');
+    g.addColorStop(0.45, 'rgba(0,0,0,0.7)');
+    g.addColorStop(0.8, 'rgba(0,0,0,0.22)');
+    g.addColorStop(1, 'rgba(0,0,0,0)');
+    t.fillStyle = g; t.fillRect(-S * 2, -S * 2, S * 4, S * 4);
+    ctx.drawImage(tmp, Math.round((cx - R) * dpr) / dpr, Math.round((cy - R) * dpr) / dpr, S / dpr, S / dpr);
+  }
+
+  endStroke() {
+    clearTimeout(this.it);
+    if (this.lp && this.strokeLen > 4) this.fadeEnd(this.lp);
+    this.lp = null; this.strokeLen = 0;
+  }
+
+  rake(p0, n0, p1, n1) {
+    const ctx = this.ctx; if (!ctx) return;
+    const T = this.tines(), s = 9, half = T * s / 2 + 2;
+    const tr = Math.min(1, this.strokeLen / 48), ramp = tr * tr * (3 - 2 * tr);
+    const k = this.depth() * ramp;
+    ctx.save();
+    ctx.globalAlpha = 0.25 + 0.75 * ramp;
+    ctx.fillStyle = this.pat;
+    ctx.beginPath();
+    ctx.moveTo(p0.x + n0.x * half, p0.y + n0.y * half);
+    ctx.lineTo(p1.x + n1.x * half, p1.y + n1.y * half);
+    ctx.lineTo(p1.x - n1.x * half, p1.y - n1.y * half);
+    ctx.lineTo(p0.x - n0.x * half, p0.y - n0.y * half);
+    ctx.closePath(); ctx.fill();
+    ctx.restore();
+    ctx.lineCap = 'butt';
+    const line = (o, col, w) => {
+      ctx.strokeStyle = col; ctx.lineWidth = w; ctx.beginPath();
+      ctx.moveTo(p0.x + n0.x * o, p0.y + n0.y * o);
+      ctx.lineTo(p1.x + n1.x * o, p1.y + n1.y * o);
+      ctx.stroke();
+    };
+    for (let i = 0; i < T; i++) {
+      const o = (i - (T - 1) / 2) * s;
+      line(o + 2.6, `rgba(255,253,244,${0.5 * k})`, 2.4);
+      line(o, `rgba(140,124,96,${0.3 * k})`, 3);
+      line(o - 1.4, `rgba(92,78,56,${0.24 * k})`, 1.2);
+    }
+    line(half - 0.8, `rgba(118,102,76,${0.14 * k})`, 1.6);
+    line(-half + 0.8, `rgba(255,253,244,${0.3 * k})`, 1.6);
+  }
+
+  updateComb() {
+    const bar = this.barRef.current, hd = this.handleRef.current;
+    if (!bar || !hd) return;
+    const n = this.n || { x: 0, y: 1 }, d = this.d || { x: 1, y: 0 };
+    const L = this.tines() * 9 + 3;
+    const a = Math.atan2(n.y, n.x) * 180 / Math.PI;
+    const b = Math.atan2(-d.y, -d.x) * 180 / Math.PI;
+    bar.style.width = L + 'px';
+    bar.style.transform = `translate(-50%,-50%) rotate(${a}deg)`;
+    hd.style.transform = `rotate(${b}deg)`;
+  }
+
+  onMove = (e) => {
+    const hero = this.heroRef.current, comb = this.combRef.current;
+    if (!hero || !comb) return;
+    if (!this.ctx) this.fitCanvas();
+    const r = hero.getBoundingClientRect();
+    const x = e.clientX - r.left, y = e.clientY - r.top;
+    const blocked = e.target && e.target.closest && e.target.closest('[data-no-rake]');
+    if (blocked) { comb.style.opacity = '0'; this.endStroke(); return; }
+    comb.style.opacity = '1';
+    comb.style.transform = `translate3d(${x}px,${y}px,0)`;
+    if (!this.n) { this.n = { x: 0, y: 1 }; this.d = { x: 1, y: 0 }; }
+    if (!this.lp) { this.lp = { x, y }; this.strokeLen = 0; this.updateComb(); return; }
+    const dx = x - this.lp.x, dy = y - this.lp.y, dist = Math.hypot(dx, dy);
+    if (dist < 3) return;
+    if (dist > 180) { this.endStroke(); this.lp = { x, y }; return; }
+    const ux = dx / dist, uy = dy / dist;
+    this.u = { x: ux, y: uy };
+    this.strokeLen = (this.strokeLen || 0) + dist;
+    clearTimeout(this.it); this.it = setTimeout(() => this.endStroke(), 220);
+    let nx = -uy, ny = ux;
+    if (nx * this.n.x + ny * this.n.y < 0) { nx = -nx; ny = -ny; }
+    const a = 0.3;
+    const n0 = this.n;
+    let sx = n0.x * (1 - a) + nx * a, sy = n0.y * (1 - a) + ny * a;
+    const sl = Math.hypot(sx, sy) || 1; const n1 = { x: sx / sl, y: sy / sl };
+    let tx = this.d.x * 0.8 + ux * 0.2, ty = this.d.y * 0.8 + uy * 0.2;
+    const tl = Math.hypot(tx, ty) || 1; this.d = { x: tx / tl, y: ty / tl };
+    this.rake(this.lp, n0, { x, y }, n1);
+    this.n = n1; this.lp = { x, y };
+    this.updateComb();
+  };
+  onLeave = () => { if (this.combRef.current) this.combRef.current.style.opacity = '0'; this.endStroke(); };
+
+  scrollCards(dir) {
+    const tr = this.trackRef.current, vp = this.viewportRef.current;
+    if (!tr || !vp) return;
+    const card = tr.querySelector('[data-card]'); if (!card) return;
+    vp.scrollBy({ left: dir * (card.offsetWidth + 24), behavior: 'smooth' });
+  }
+
+  positionCarousel() { return;
+    const tr = this.trackRef.current, vp = this.viewportRef.current;
+    if (!tr || !vp) return;
+    const cards = tr.querySelectorAll('[data-card]');
+    const card = cards[this.state.idx]; if (!card) return;
+    const off = vp.clientWidth / 2 - (card.offsetLeft + card.offsetWidth / 2);
+    tr.style.transform = `translate3d(${off}px,0,0)`;
+  }
+
+  copyEmail = () => {
+    const email = 'nat33p@gmail.com';
+    const fallback = () => { const t = document.createElement('textarea'); t.value = email; t.style.position = 'fixed'; t.style.opacity = '0'; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); } catch (e) {} t.remove(); };
+    try { navigator.clipboard ? navigator.clipboard.writeText(email).catch(fallback) : fallback(); } catch (e) { fallback(); }
+    this.setState({ copied: true });
+    clearTimeout(this.ct); this.ct = setTimeout(() => this.setState({ copied: false }), 1800);
+  };
+
+  renderVals() {
+    const T = [
+      {"name":"Joseph Barolucci","role":"Creative Director","img":"data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==","a":"“Working with Natalie is a joy. When you have someone as talented as her on your team, everyone’s game gets elevated. UX/UI, identity design, illustration, she excels in so many areas, you can’t really pin down what she might be best at doing. You’re just glad she’s on your team because everything she works on looks great and hits the mark.","b":"She cares. She leads. She has a POV. I’ve worked with many, many creatives in my day, and Natalie is definitely in the top echelon! Thank you Nat-atatat!”"},
+      {"name":"Nicole Dornsife","role":"Website & Content Manager","img":"assets/avatars/nicole-dornsife.png","a":"“Natalie is an absolute pleasure to work with. She consistently was able to seamlessly combine my writing with gorgeous, intuitive design that made sense not only for the content, but for the overall user experience. From ebooks, to our website redesign project (UX), to conference collateral, she always came through exceeding expectations and taking each piece to the next level in style and user-friendliness.","b":"On a personal level, she’s easy to get along with, funny, and incredibly smart. Anyone would be lucky to have her leading their design initiatives or working within their team.”"},
+      {"name":"William Leborgne","role":"Head of Content","img":"assets/avatars/william-leborgne.png","a":"“It’s rare to come across as creative and collaborative a designer as Natalie. I had the pleasure of working alongside Natalie on MomentFeed’s content, as well as observe her hard work across the website, product marketing assets, events and office design. I was always in awe of Natalie’s ability to juggle multiple projects at the same time, while never losing her positive morale and friendly demeanor.","b":"She made it easy to get things done at the highest level and still found time to propose improvements to our marketing team’s operational/org structure. No matter how much work we had, or how tense the situation, I knew I could depend on Natalie. She’s a great person, and has equally great taste in music! Any company would be lucky to have Natalie on their team.”"},
+      {"name":"Brian Hinman","role":"Senior Recruiter","img":"assets/avatars/brian-hinman.png","a":"“Natalie has an incredibly rare blend of both fantastic aesthetic / artistic abilities and an extraordinary professional work ethic. Beyond graphic design, she can create an overall beautiful and cohesive interior environment as well. She has a great eye, solid skills, and is an absolute pleasure to be around.","b":"I recommend Natalie for anything graphic design related — and when it comes to interiors, a music playlist, or friendship, she really shines there too. She’s a true rock star.”"},
+    ];
+    const L = [
+      { name: 'Acer', src: 'assets/logos/acer.png', h: 27 },
+      { name: 'Tahzoo', src: 'assets/logos/tahzoo.png', h: 24 },
+      { name: 'Fetch', src: 'assets/logos/fetch.png', h: 31 },
+      { name: 'Uberall', src: 'assets/logos/uberall.png', h: 30 },
+      { name: 'The Home Depot', src: 'assets/logos/homedepot.png', h: 44 },
+      { name: 'Patch', src: 'assets/logos/patch.png', h: 32 },
+      { name: 'MyFitnessPal', src: 'assets/logos/mfp.png', h: 25 },
+    ];
+    const n = T.length;
+    return {
+      toSection: (e) => {
+        const id = (e.currentTarget.getAttribute('href') || '').slice(1);
+        const el = id && document.getElementById(id);
+        if (!el) return;
+        e.preventDefault();
+        window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY, behavior: 'smooth' });
+        try { history.replaceState(null, '', '#' + id); } catch (err) {}
+      },
+      heroRef: this.heroRef, canvasRef: this.canvasRef, combRef: this.combRef, barRef: this.barRef, handleRef: this.handleRef,
+      marqueeRef: this.marqueeRef, trackRef: this.trackRef, viewportRef: this.viewportRef,
+      onMove: this.onMove, onLeave: this.onLeave,
+      showTrees: (this.props.showTrees ?? true) && !this.state.narrow,
+      tineList: Array.from({ length: this.tines() }, (_, i) => i),
+      logos: [...L, ...L, ...L, ...L],
+      work: [
+        { title: 'MyFitnessPal', desc: 'Weight-loss pace design increases healthy choices by 900%\n', img: './mfpwl-hero1-muol8yle-46yh.jpeg', href: 'MyFitnessPal%20Case%20Study.dc.html' },
+        { title: 'MyFitnessPal', desc: 'Multi-day logging becomes the #2 used Premium feature', img: 'assets/work/mfp-multiday.gif', href: 'MyFitnessPal%20Multi-day%20Log%20Case%20Study.dc.html' },
+        { title: 'Patch', desc: 'Homepage redesign increases ad profits while improving reading experience\n', img: 'assets/patch/patch-1.png', href: 'Patch%20Case%20Study.dc.html' },
+        // Hidden for now: { title: 'Flysview', desc: 'New Flysview app lands licensing deal with Samsung', img: 'assets/work/monzo.png', href: '#work' },
+      ],
+      testimonials: T,
+      prev: () => this.scrollCards(-1),
+      next: () => this.scrollCards(1),
+      ventures: ['assets/icons/venture-1.svg', 'assets/icons/venture-2.svg', 'assets/icons/venture-3.svg', 'assets/icons/venture-4.svg'],
+      copyEmail: this.copyEmail,
+      copyLabel: this.state.copied ? 'Copied ✓' : 'Copy email',
+    };
+  }
+}
+</script>
+</body>
+</html>

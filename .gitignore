@@ -1,0 +1,11 @@
+.DS_Store
+._*
+Thumbs.db
+.vscode/
+.idea/
+node_modules/
+*.log
+dist/
+.next/
+.env
+.env.local
