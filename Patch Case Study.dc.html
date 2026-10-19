@@ -34,6 +34,8 @@ body{font-family:Figtree,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 a{color:#39343F;text-decoration:none;}
 a:hover{color:#676F4D;}
 img{display:block;max-width:100%;}
+.footer-spacer{flex:0 0 160px;}
+@media (max-width:1023px){.footer-spacer{display:none;}}
 </style>
 </helmet>
 
@@ -174,12 +176,66 @@ img{display:block;max-width:100%;}
   </nav>
 
 </main>
+
+<footer data-screen-label="Footer" style="background: #EDE8D8; padding: clamp(80px, 8.33vw, 160px) 20px; display: flex; justify-content: center;">
+  <div style="width: 100%; max-width: 1280px; display: flex; flex-wrap: wrap; gap: 48px 64px;">
+    <a href="#top" class="footer-spacer" aria-hidden="true" tabindex="-1"></a>
+    <div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 64px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px;">
+        <p style="margin: 0; max-width: 420px; font-weight: 500; font-size: clamp(18px, 1.14vw, 21.8px); line-height: 1.65; letter-spacing: 0.144px; text-wrap: pretty;">I’m Nat, a Product Design leader bringing clarity to complex product challenges.</p>
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <a href="mailto:nat33p@gmail.com" target="_top" style="height: 48px; display: flex; align-items: center; padding: 0 22px; border-radius: 10.8px; color: #fff; font-weight: 500; font-size: 13.9px; letter-spacing: 0.3px; white-space: nowrap; gap: 8px; background-color: #676F4D; padding-left: 16px; padding-right: 16px" style-hover="background: #565D40; color: #fff;"><svg viewBox="0 0 42 42" fill="none" aria-hidden="true" style="width: 15px; height: 15px; flex-shrink: 0;"><path d="M41.5627 0.437581C41.7683 0.643038 41.9099 0.903832 41.9701 1.18824C42.0302 1.47265 42.0065 1.76842 41.9017 2.03958L26.9017 41.0396C26.7955 41.3155 26.6101 41.554 26.3689 41.7249C26.1276 41.8958 25.8412 41.9917 25.5456 42.0003C25.2501 42.009 24.9585 41.9301 24.7077 41.7736C24.4568 41.617 24.2578 41.3899 24.1357 41.1206L17.8627 27.3206L27.0907 18.0896C27.4881 17.6631 27.7045 17.0989 27.6942 16.516C27.6839 15.9331 27.4478 15.377 27.0355 14.9647C26.6233 14.5525 26.0671 14.3163 25.4842 14.3061C24.9013 14.2958 24.3372 14.5121 23.9107 14.9096L14.6797 24.1376L0.879666 17.8676C0.609566 17.7456 0.381656 17.5463 0.224699 17.2949C0.0677422 17.0435 -0.0112262 16.7513 -0.00223973 16.4551C0.00674673 16.1588 0.103285 15.8719 0.275192 15.6305C0.447099 15.3891 0.686668 15.204 0.963666 15.0986L39.9637 0.0985809C40.2344 -0.00559549 40.5296 -0.0290182 40.8134 0.0311505C41.0972 0.0913193 41.3575 0.232497 41.5627 0.437581Z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor"></path></svg>Email me</a>
+          <button onClick="{{ copyEmail }}" style="height: 46px; padding: 0 22px; border-radius: 10.8px; background: #fff; border: 1px solid rgba(0,0,0,0.102); font-family: Figtree, sans-serif; font-weight: 500; font-size: 14.1px; letter-spacing: 0.3px; color: #39343F; cursor: pointer; white-space: nowrap; display: inline-flex; align-items: center; gap: 8px; padding-left: 16px; padding-right: 16px"><svg viewBox="0 0 42 42" fill="none" aria-hidden="true" style="width: 15px; height: 15px; flex-shrink: 0;"><path d="M37.8571 0H17.1429C14.8548 0 13 1.85482 13 4.14286V24.8571C13 27.1452 14.8548 29 17.1429 29H37.8571C40.1452 29 42 27.1452 42 24.8571V4.14286C42 1.85482 40.1452 0 37.8571 0Z" fill="#676F4D"></path><path d="M13.4643 33.7143C12.0908 33.7143 10.7737 33.1687 9.80248 32.1975C8.83131 31.2263 8.28571 29.9092 8.28571 28.5357V13H4.14286C1.86429 13 0 14.8643 0 17.1429V37.8571C0 40.1357 1.86429 42 4.14286 42H24.8571C27.1357 42 29 40.1357 29 37.8571V33.7143H13.4643Z" fill="#676F4D"></path></svg>{{ copyLabel }}</button>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 40px 32px;">
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <span style="font-weight: 500; font-size: 14.8px; line-height: 25.5px; color: rgba(57,52,63,0.72); padding-bottom: 6px;">Social</span>
+          <a href="https://www.linkedin.com/in/petersonnatalie/" style="font-weight: 500; font-size: 15px; line-height: 25.5px;" target="_blank" rel="noopener noreferrer">Linkedin</a>
+          <a href="https://dribbble.com/nat33p" style="font-weight: 500; font-size: 15px; line-height: 25.5px;">Dribbble</a>
+          <a href="https://www.pinterest.com/natatatdesign/" style="font-weight: 500; font-size: 15px; line-height: 25.5px;" target="_blank" rel="noopener noreferrer">Pinterest</a>
+          
+          
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <span style="font-weight: 500; font-size: 14.8px; line-height: 25.5px; color: rgba(57,52,63,0.72); padding-bottom: 6px;">Pages</span>
+          <a href="Portfolio.dc.html#work" style="font-weight: 500; font-size: 15px; line-height: 25.5px;">Work</a>
+          
+          <a href="About.dc.html" style="font-weight: 500; font-size: 15px; line-height: 25.5px;">About</a>
+          
+          
+          
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          
+          
+          
+          
+          
+        </div>
+      </div>
+      <span style="font-weight: 500; font-size: 14.8px; line-height: 25.5px; color: rgba(57,52,63,0.72); position: relative">©2026 to Natalie Peterson</span>
+    </div>
+  </div>
+</footer>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
+  state = { copied: false };
+
+  copyEmail = () => {
+    const email = 'nat33p@gmail.com';
+    const fallback = () => { const t = document.createElement('textarea'); t.value = email; t.style.position = 'fixed'; t.style.opacity = '0'; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); } catch (e) {} t.remove(); };
+    try { navigator.clipboard ? navigator.clipboard.writeText(email).catch(fallback) : fallback(); } catch (e) { fallback(); }
+    this.setState({ copied: true });
+    clearTimeout(this.ct); this.ct = setTimeout(() => this.setState({ copied: false }), 1800);
+  };
+
   renderVals() {
     return {
+      copyEmail: this.copyEmail,
+      copyLabel: this.state.copied ? 'Copied ✓' : 'Copy email',
       toTop: (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); },
       problems: [
         { n: '1', t: 'Unclear offerings', d: 'Patch readers, both new and existing, weren’t familiar with all that Patch offered. Site features were often difficult to find.' },
