@@ -34,6 +34,12 @@ body{font-family:Figtree,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 a{color:#39343F;text-decoration:none;}
 a:hover{color:#676F4D;}
 img{display:block;max-width:100%;}
+.pair-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px 80px;}
+@media (max-width:767px){
+  .pair-head{display:none;}
+  .pair-row{grid-template-columns:minmax(0,1fr);gap:16px;padding:24px 0 !important;}
+  .pair-row>[data-label]::before{content:attr(data-label);display:block;margin-bottom:4px;font-weight:700;font-size:13px;line-height:1.4;letter-spacing:0.06em;text-transform:uppercase;color:#676F4D;}
+}
 </style>
 </helmet>
 
@@ -113,9 +119,9 @@ img{display:block;max-width:100%;}
       </div>
     </div>
     <div style="display: flex; flex-direction: column; border-top: 1px solid rgba(57,52,63,0.15);">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 8px 80px; padding: 16px 0; font-weight: 700; font-size: 16px; border-bottom: 1px solid rgba(57,52,63,0.15);"><span>Research insight</span><span>Design implication</span></div>
+      <div class="pair-row pair-head" style="padding: 16px 0; font-weight: 700; font-size: 16px; border-bottom: 1px solid rgba(57,52,63,0.15);"><span>Research insight</span><span>Design implication</span></div>
       <sc-for list="{{ insights }}" as="r" hint-placeholder-count="4">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 8px 80px; padding: 20px 0; font-size: 18px; line-height: 1.6; border-bottom: 1px solid rgba(57,52,63,0.15);"><span style="text-wrap: pretty;">{{ r.a }}</span><span style="text-wrap: pretty;">{{ r.b }}</span></div>
+        <div class="pair-row" style="padding: 20px 0; font-size: 18px; line-height: 1.6; border-bottom: 1px solid rgba(57,52,63,0.15);"><span data-label="Research insight" style="text-wrap: pretty;">{{ r.a }}</span><span data-label="Design implication" style="text-wrap: pretty;">{{ r.b }}</span></div>
       </sc-for>
     </div>
   </section>
@@ -140,9 +146,9 @@ img{display:block;max-width:100%;}
       </div>
     </div>
     <div style="display: flex; flex-direction: column; border-top: 1px solid rgba(57,52,63,0.15);">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 8px 80px; padding: 16px 0; font-weight: 700; font-size: 16px; border-bottom: 1px solid rgba(57,52,63,0.15);"><span>Finding</span><span>Implication for the next iteration</span></div>
+      <div class="pair-row pair-head" style="padding: 16px 0; font-weight: 700; font-size: 16px; border-bottom: 1px solid rgba(57,52,63,0.15);"><span>Finding</span><span>Implication for the next iteration</span></div>
       <sc-for list="{{ findings }}" as="r" hint-placeholder-count="5">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 8px 80px; padding: 20px 0; font-size: 18px; line-height: 1.6; border-bottom: 1px solid rgba(57,52,63,0.15);"><span style="text-wrap: pretty;">{{ r.a }}</span><span style="text-wrap: pretty;">{{ r.b }}</span></div>
+        <div class="pair-row" style="padding: 20px 0; font-size: 18px; line-height: 1.6; border-bottom: 1px solid rgba(57,52,63,0.15);"><span data-label="Finding" style="text-wrap: pretty;">{{ r.a }}</span><span data-label="Implication for the next iteration" style="text-wrap: pretty;">{{ r.b }}</span></div>
       </sc-for>
     </div>
     
