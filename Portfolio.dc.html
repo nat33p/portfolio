@@ -52,6 +52,8 @@ body{font-family:Figtree,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 a{color:#39343F;text-decoration:none;}
 a:hover{color:#676F4D;}
 img{display:block;}
+.footer-spacer{flex:0 0 160px;}
+@media (max-width:1023px){.footer-spacer{display:none;}}
 </style>
 </helmet>
 
@@ -174,8 +176,8 @@ img{display:block;}
 
 <footer data-screen-label="Footer" style="background: #EDE8D8; padding: clamp(80px, 8.33vw, 160px) 20px; display: flex; justify-content: center;">
   <div style="width: 100%; max-width: 1280px; display: flex; flex-wrap: wrap; gap: 48px 64px;">
-    <a href="#top" style="flex: 0 0 160px;"></a>
-    <div style="flex: 1 1 520px; display: flex; flex-direction: column; gap: 64px; width: 762px; height: 335px">
+    <a href="#top" class="footer-spacer" aria-hidden="true" tabindex="-1"></a>
+    <div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 64px;">
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px;">
         <p style="margin: 0; max-width: 420px; font-weight: 500; font-size: clamp(18px, 1.14vw, 21.8px); line-height: 1.65; letter-spacing: 0.144px; text-wrap: pretty;">I’m Nat, a Product Design leader bringing clarity to complex product challenges.</p>
         <div style="display: flex; gap: 12px; align-items: center;">
@@ -211,7 +213,7 @@ img{display:block;}
       </div>
       <span style="font-weight: 500; font-size: 14.8px; line-height: 25.5px; color: rgba(57,52,63,0.72); position: relative">©2026 to Natalie Peterson</span>
     </div>
-  </div><a href="#top" style="flex: 0 0 160px;"></a>
+  </div>
 </footer>
 
 </div>
