@@ -270,9 +270,8 @@ class Component extends DCLogic {
     cancelAnimationFrame(this.raf);
     this.ro && this.ro.disconnect();
   }
-  componentDidUpdate(pp, ps) {
+  componentDidUpdate(pp) {
     this.syncImgs();
-    if (ps.idx !== this.state.idx) this.positionCarousel();
     if (pp.tines !== this.props.tines) this.updateComb();
   }
 
